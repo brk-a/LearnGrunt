@@ -13,7 +13,7 @@ Installing Grunt.js
 5. create a Gruntfile.js
    5.1 configures tasks and tells plug-ins where to find certain files
    5.2 touch Gruntfile.js
-6. install plug-ins -> 
+6. install plug-ins -> gruntjs.com/plugins. follow instructions
    6.1 grunt.initConfig(...)
    6.2 grunt.loadNpmTask(...)
    6.3 grunt.registerTask(...)

@@ -2,27 +2,31 @@ module.exports = function(grunt){
     
     //configure
     grunt.initConfig({
-        //pass in options to plugins, references to files etc
+        concat: {
+            js:{
+                src: ['js/*.js'], //regex. regex everywhere
+                dest: 'build/scripts.js'
+            },
+            css:{
+                src: ['css/*.css'],
+                dest: 'styles.css'
+            }
+        }
     });
 
     //load plug-ins
-    grunt.loadNpmTasks('');
+    grunt.loadNpmTasks('grunt-contrib-concat');
 
     //register tasks
-    grunt.registerTask('run', function(){
-        console.log('I am running')
-    });
-
-    grunt.registerTask('sleep', function(){
-        console.log('I am sleeping')
-    });
-
-    grunt.registerTask('all', ['run', 'sleep']);
+    grunt.registerTask('concat-js', ['concat:js']); //concats js only
+    grunt.registerTask('concat-css', ['concat:css']); //concats css only
 };
 
 /**
- * on the terminal, type:
- * `grunt run`
- * `grunt sleep`
- * `grunt all`
+ * on terminal, type:
+ * `grunt concat`
+ * `grunt concat-js`
+ * `grunt concat-css`
+ * 
+ * RTFM. Flow of one plug-in is not necessarily similar to another
  */

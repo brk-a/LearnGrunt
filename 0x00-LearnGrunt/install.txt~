@@ -1,0 +1,15 @@
+Installing Grunt.js
+
+1. install Node.js -> installs npm as well
+2. install grunt-cli globally
+   2.1 npm install grunt-cli -g 
+   2.2 allows one to use grunt from anywhere on the machine
+3. create a package.json file -> track dependencies
+   3.1 npm init
+4. install grunt locally
+   4.1 cd ~/path/to/project
+   4.2 npm install grunt --save-dev
+   4.3 package.json will be updated when installation is successful
+5. create a Gruntfile.js
+   5.1 touch Gruntfile.js
+6. install plug-ins
